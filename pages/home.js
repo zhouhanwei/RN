@@ -355,6 +355,7 @@ export default class App extends Component {
            screenOptions={{
              headerStyle: {
                backgroundColor: '#f4511e',
+               height: 0,
              },
              headerTintColor: '#fff',
              headerTitleStyle: {
@@ -368,7 +369,7 @@ export default class App extends Component {
             component={HomeScreen}
             options={{
               //headerTransparent: true,
-              headerTitle: "1",
+              headerTitle: "AAA",
               headerStyle: {
                 backgroundColor: '#f00',
                 height: 0,

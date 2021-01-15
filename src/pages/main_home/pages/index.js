@@ -14,8 +14,8 @@ import {
 } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import ScrollableTabView, {DefaultTabBar, ScrollableTabBar} from 'react-native-scrollable-tab-view';
-import G_Text from '../component/G_Text';
-import MyTabBar from '../component/G_Custom_Tab';
+import G_Text from '/pages/component/G_Text';
+import MyTabBar from '/pages/component/G_Custom_Tab';
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 
@@ -39,7 +39,7 @@ class Home extends Component {
     SplashScreen.hide();
 
     // 计算图片高度
-    let imageObj = Image.resolveAssetSource(require("../../src/assets/images/news-img.jpg"));
+    let imageObj = Image.resolveAssetSource(require("/src/assets/images/news-img.jpg"));
 
     let { width, height } = imageObj;
     let myHeight = Math.floor((screenWidth - 24 - 12) / width * height);
@@ -58,7 +58,7 @@ class Home extends Component {
         <StatusBar backgroundColor="#4ba8a1" barStyle="light-content" hidden={false}/>
         <View style={{backgroundColor: '#4ba8a1', flexDirection: 'row', alignItems: 'center', paddingLeft: 12, paddingRight: 12, paddingTop: 12}}>
           <View>
-            <Image source={require('../../src/assets/images/logo_ico.png')} style={{width: 40, height: 40}}/>
+            <Image source={require('/src/assets/images/logo_ico.png')} style={{width: 40, height: 40}}/>
           </View>
           <View style={{marginLeft: 12, marginRight: 12}}>
             <Text style={{color: '#fff'}}>24/10 ℃</Text>
@@ -111,7 +111,7 @@ class Home extends Component {
                 <View style={{backgroundColor: '#fff', padding: 12, marginTop: 12}}>
                   <View style={{flexDirection: 'row', borderBottomWidth: 1, borderBottomColor: '#eee', paddingBottom: 12}}>
                     <View style={{width: '100%', flex: 1, marginRight: 6,}}>
-                      <Image source={require("../../src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
+                      <Image source={require("/src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
                     </View>
                     <View style={{flex: 2, marginLeft: 6}}>
                       <G_Text tWeight="bold" tColor='#333333' tSize={16} tTitle="中国军工正改进歼-20“心脏”，直到其可以匹敌F-22"></G_Text>
@@ -138,14 +138,14 @@ class Home extends Component {
                     <G_Text tWeight="bold" tColor='#333333' tSize={16} tTitle="日本人发明的故乡税，值得我们借鉴吗？"></G_Text>
                     <Text style={{color: '#999', marginTop: 6}}>老妪宽大山 14小时前</Text>
                     <View style={{flexDirection: 'row', marginTop: 6}}>
-                      <Image source={require("../../src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
-                      <Image source={require("../../src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
-                      <Image source={require("../../src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
+                      <Image source={require("/src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
+                      <Image source={require("/src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
+                      <Image source={require("/src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
                     </View>
                   </View>
                   <View style={{flexDirection: 'row', borderBottomWidth: 1, borderBottomColor: '#eee', paddingTop: 12, paddingBottom: 12}}>
                     <View style={{width: '100%', flex: 1, marginRight: 6,}}>
-                      <Image source={require("../../src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
+                      <Image source={require("/src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
                     </View>
                     <View style={{flex: 2, paddingLeft: 6, boxSizing: 'border-box'}}>
                       <G_Text tWeight="bold" tColor='#333333' tSize={16} tTitle="中国军工正改进歼-20“心脏”，直到其可以匹敌F-22"></G_Text>
@@ -156,8 +156,8 @@ class Home extends Component {
                     <G_Text tWeight="bold" tColor='#333333' tSize={16} tTitle="日本人发明的故乡税，值得我们借鉴吗？"></G_Text>
                     <Text style={{color: '#999', marginTop: 6}}>老妪宽大山 14小时前</Text>
                     <View style={{flexDirection: 'row', marginTop: 6}}>
-                      <Image source={require("../../src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
-                      <Image source={require("../../src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
+                      <Image source={require("/src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
+                      <Image source={require("/src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
                       <View style={{flex: 1,}}></View>
                     </View>
                   </View>
@@ -165,32 +165,14 @@ class Home extends Component {
                     <G_Text tWeight="bold" tColor='#333333' tSize={16} tTitle="日本人发明的故乡税，值得我们借鉴吗？"></G_Text>
                     <Text style={{color: '#999', marginTop: 6}}>老妪宽大山 7小时前</Text>
                     <View style={{flexDirection: 'row', marginTop: 6}}>
-                      <Image source={require("../../src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
-                      <Image source={require("../../src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
-                      <Image source={require("../../src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
+                      <Image source={require("/src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
+                      <Image source={require("/src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
+                      <Image source={require("/src/assets/images/news-img.jpg")} style={{ width: '100%', flex: 1, marginRight: 6 , height: this.state.imgObjHg, borderRadius: 10}} />
                     </View>
                   </View>
                 </View>
               </ScrollView>
             </View>
-          </View>
-          <View tabLabel='热点'>
-            <Text>Tab2</Text>
-          </View>
-          <View tabLabel='搞笑'>
-            <Text>Tab3</Text>
-          </View>
-          <View tabLabel='视频'>
-            <Text>Tab4</Text>
-          </View>
-          <View tabLabel='社会'>
-            <Text>Tab5</Text>
-          </View>
-          <View tabLabel='娱乐'>
-            <Text>Tab6</Text>
-          </View>
-          <View tabLabel='科技'>
-            <Text>Tab7</Text>
           </View>
         </ScrollableTabView>
       </View>
