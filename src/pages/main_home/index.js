@@ -19,26 +19,11 @@ import {
   TouchableOpacity,
   Alert
 } from 'react-native';
-
-import HomeIndex from '../main_home/pages/index';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import HomeIndex from '@/pages/main_home/pages/index';
+import My from '@/pages/main_home/pages/my';
 
 const Tab = createBottomTabNavigator();
-
-function DetailsScreen() {
-  return (
-    <View>
-      <Text>111111</Text>
-    </View>
-  )
-}
-
-function DetailsScreen1() {
-  return (
-    <View>
-      <Text>22222</Text>
-    </View>
-  )
-}
 
 class MainHome extends Component {
   constructor(props) {
@@ -54,27 +39,29 @@ class MainHome extends Component {
     return (
         <Tab.Navigator
           screenOptions={({ route }) => ({
-            // tabBarIcon: ({ focused, color, size }) => {
-            //   let iconName;
-            //
-            //   if (route.name === 'Home') {
-            //     iconName = focused
-            //       ? 'ios-information-circle'
-            //       : 'ios-information-circle-outline';
-            //   } else if (route.name === 'Settings') {
-            //     iconName = focused ? 'ios-list-box' : 'ios-list';
-            //   }
-            //
-            //   // You can return any component that you like here!
-            //   return <Ionicons name={iconName} size={size} color={color} />;
-            // },
+            tabBarIcon: ({ focused, color, size }) => {
+              let iconName;
+              let iconColor;
+              if (route.name === '首页') {
+                iconName = focused
+                  ? 'home'
+                  : 'home';
+              } else if (route.name === '我') {
+                iconName = focused ? 'user' : 'user';
+              }
+
+              iconColor = focused ? '#4ba8a1' : 'gray';
+
+              // You can return any component that you like here!
+              return <FontAwesome name={iconName} size={16} color={iconColor} />;
+            },
           })}
           tabBarOptions={{
-            activeTintColor: 'blue',
+            activeTintColor: '#4ba8a1',
             inactiveTintColor: 'gray',
           }}>
-          <Tab.Screen name="Home" component={HomeIndex} />
-          <Tab.Screen name="Settings" component={DetailsScreen1} />
+          <Tab.Screen name="首页" component={HomeIndex} />
+          <Tab.Screen name="我" component={My} />
         </Tab.Navigator>
     )
   }

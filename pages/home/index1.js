@@ -12,8 +12,8 @@ import {
 } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import ScrollableTabView, {DefaultTabBar, ScrollableTabBar} from 'react-native-scrollable-tab-view';
-import G_Text from '../component/G_Text';
-import MyTabBar from '../component/G_Custom_Tab';
+import G_Text from '../../src/pages/component/G_Text';
+import MyTabBar from '../../src/pages/component/G_Custom_Tab';
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 

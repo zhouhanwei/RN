@@ -3,7 +3,7 @@ import SplashScreen from 'react-native-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import Login from '../pages/login';
-import MainHome from '../pages/main_home/index';
+import MainHome from '@/pages/main_home/index';
 const Stack = createStackNavigator();
 
 export  default class Route extends Component {
