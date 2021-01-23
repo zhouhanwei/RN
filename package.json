@@ -18,6 +18,7 @@
     "android": "0.0.8",
     "react": "16.13.1",
     "react-native": "0.63.4",
+    "react-native-code-push": "^6.3.0",
     "react-native-gesture-handler": "^1.9.0",
     "react-native-reanimated": "^1.13.2",
     "react-native-safe-area-context": "^3.1.9",
@@ -25,6 +26,7 @@
     "react-native-scrollable-tab-view": "^1.0.0",
     "react-native-splash-screen": "^3.2.0",
     "react-native-vector-icons": "^7.1.0",
+    "react-native-video": "^5.1.1",
     "react-native-webview": "^11.0.2",
     "react-navigation": "^4.4.3"
   },

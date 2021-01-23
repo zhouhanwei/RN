@@ -22,6 +22,7 @@ import {
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import HomeIndex from '@/pages/main_home/pages/index';
 import My from '@/pages/main_home/pages/my';
+import VideoPage from '@/pages/main_home/pages/video';
 
 const Tab = createBottomTabNavigator();
 
@@ -49,18 +50,27 @@ class MainHome extends Component {
               } else if (route.name === '我') {
                 iconName = focused ? 'user' : 'user';
               }
+              else if (route.name === '视频') {
+                iconName = focused ? 'video-camera' : 'video-camera';
+              }
 
               iconColor = focused ? '#4ba8a1' : 'gray';
 
               // You can return any component that you like here!
-              return <FontAwesome name={iconName} size={16} color={iconColor} />;
+              return <FontAwesome name={iconName} size={22} color={iconColor} />;
             },
           })}
           tabBarOptions={{
             activeTintColor: '#4ba8a1',
             inactiveTintColor: 'gray',
+            //activeBackgroundColor: '#f00',
+            tabStyle: {
+              paddingBottom: 4
+            },
+            showLabel: true,
           }}>
           <Tab.Screen name="首页" component={HomeIndex} />
+          <Tab.Screen name="视频" component={VideoPage} />
           <Tab.Screen name="我" component={My} />
         </Tab.Navigator>
     )

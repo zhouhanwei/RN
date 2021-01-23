@@ -18,6 +18,10 @@ target 'web_rn' do
 
   pod 'react-native-webview', :path => '../node_modules/react-native-webview'
 
+  pod 'react-native-video', :path => '../node_modules/react-native-video'
+
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
+
   target 'web_rnTests' do
     inherit! :complete
     # Pods for testing

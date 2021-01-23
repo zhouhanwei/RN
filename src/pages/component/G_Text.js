@@ -18,7 +18,7 @@ export default class G_Text extends Component {
     const {tTitle, tSize, tColor, tWeight} = this.props;
 
     return (
-      <Text style={{fontSize: tSize || 12, color: tColor || '#33333', fontWeight: 'normal'}}>{tTitle}</Text>
+      <Text style={{fontSize: tSize || 12, color: tColor || '#33333', fontWeight: tWeight || 'normal'}}>{tTitle}</Text>
     )
   }
 }
